@@ -11,7 +11,6 @@ function parse(input)
     for(let i = 0; i < splitInput.length; i++)
     {
         let currInput = splitInput[i].split('|');
-        console.log(currInput);
         convert(currInput);
     }
 
@@ -21,7 +20,6 @@ function parse(input)
 function convert(cityInfo)
 {
     let convertedTemp = (cityInfo[1] - 32.0) * 5/9;
-    console.log("Converted Temp: " + convertedTemp)
     if(convertedTemp < 20.0)
     {
         coldCities.push([cityInfo[0], convertedTemp])
